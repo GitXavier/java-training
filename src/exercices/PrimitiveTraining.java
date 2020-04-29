@@ -15,5 +15,5 @@ public class PrimitiveTraining {
     public static boolean bool() { return false;}
 
     // TODO 5 : Create a method 'nothing', no result expected
-    public static void nothing() { }
+    public static void nothing() {  }
 }
