@@ -4,16 +4,14 @@ public class FundamentalsTraining {
      * @param value, eg: 2
      * @return the same value, eg: 2
      */
-    public static int sameValue(int value) {
-        return 0;
-    }
+    public static int sameValue(int value) { return value; }
 
     /**
      * @param value, eg: 2
      * @return one added to the value, eg: 3
      */
     public static int addOne(int value) {
-        return 0;
+        return value + 1;
     }
 
     /**
@@ -22,7 +20,7 @@ public class FundamentalsTraining {
      * @return first added to second, eg: 5
      */
     public static int addValues(int first, int second) {
-        return 0;
+        return first + second;
     }
 
     /**
@@ -30,7 +28,7 @@ public class FundamentalsTraining {
      * @return true if value superior to 10, eg: true
      */
     public static boolean isValueSuperiorToTen(int value) {
-        return false;
+        return value > 10;
     }
 
     /**
@@ -38,7 +36,7 @@ public class FundamentalsTraining {
      * @return true if value inferior or equals to 0, eg: true
      */
     public static boolean isValueZeroOrNegative(int value) {
-        return false;
+        return value <= 0;
     }
 
     /**
@@ -47,7 +45,7 @@ public class FundamentalsTraining {
      * @return true if first equals second, eg: true
      */
     public static boolean areValuesEquals(int first, int second) {
-        return false;
+        return first == second;
     }
 
     /**
@@ -56,7 +54,7 @@ public class FundamentalsTraining {
      * @return true if first is superior to second, eg: true
      */
     public static boolean isFirstSuperiorToSecond(int first, int second) {
-        return false;
+        return first > second;
     }
 
     /**
@@ -64,7 +62,7 @@ public class FundamentalsTraining {
      * @return true if value is even, eg: true
      */
     public static boolean isValueEven(int value) {
-        return false;
+        return value == 2;
     }
 
     /**
@@ -72,7 +70,7 @@ public class FundamentalsTraining {
      * @return true if value is odd, eg: true
      */
     public static boolean isValueOdd(int value) {
-        return false;
+        return (value%2 == 1);
     }
 
     /**
@@ -81,7 +79,7 @@ public class FundamentalsTraining {
      * @return true if value can be divided by divider, eg: true
      */
     public static boolean canValueBeDivided(int value, int divider) {
-        return false;
+        return (value%2 == 0);
     }
 
     /**
@@ -90,7 +88,12 @@ public class FundamentalsTraining {
      * eg: "true"
      */
     public static String trueOrFalse(boolean value) {
-        return null;
+
+        if (value) {
+            return "true";
+        }else {
+            return "false";
+        }
     }
 
     /**
@@ -99,7 +102,15 @@ public class FundamentalsTraining {
      *  the string "other" otherwise, eg: "one"
      */
     public static String zeroOrOneOrOther(int value) {
-        return null;
+
+        if (value != 0 && value != 1) {
+            return "other";
+        } else {
+            if (value == 1) {
+                return "one";
+            }
+            return "zero";
+        }
     }
 
     /**
