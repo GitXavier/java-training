@@ -62,7 +62,7 @@ public class FundamentalsTraining {
      * @return true if value is even, eg: true
      */
     public static boolean isValueEven(int value) {
-        return value == 2;
+        return value % 2 == 0;
     }
 
     /**
@@ -121,7 +121,17 @@ public class FundamentalsTraining {
      * the string "equals" otherwise, eg: "equals"
      */
     public static String inferiorOrSuperiorOrEquals(int first, int second) {
-        return null;
+
+        String result;
+
+        if (first < second) {
+            result = "inferior";
+        } else if (first > second) {
+            result = "superior";
+        } else {
+            result = "equals";
+        }
+        return result;
     }
 
     /**
@@ -131,7 +141,15 @@ public class FundamentalsTraining {
      * first minus second if first superior or equals to second, eg: 1
      */
     public static int addIfInferiorSubstractIfSuperiorOrEquals(int first, int second) {
-        return 0;
+        
+        int result = 0;
+        
+        if (first < second) {
+            result = first + second;
+        } else if (first > second) {
+            result = first - second;
+        }
+        return result;
     }
 
     /**
@@ -140,7 +158,7 @@ public class FundamentalsTraining {
      * @return true if first or second value is true, eg: true
      */
     public static boolean firstOrSecond(boolean first, boolean second) {
-        return false;
+        return (first || second);
     }
 
     /**
@@ -149,7 +167,7 @@ public class FundamentalsTraining {
      * @return true if first and second value is true, eg: false
      */
     public static boolean firstAndSecond(boolean first, boolean second) {
-        return false;
+        return (first && second);
     }
 
     /**
@@ -158,7 +176,7 @@ public class FundamentalsTraining {
      * @return true if first and second value are equals, eg: true
      */
     public static boolean booleanEquals(boolean first, boolean second) {
-        return false;
+        return (first == second);
     }
 
     /**
@@ -166,7 +184,7 @@ public class FundamentalsTraining {
      * @return false if value is true, true otherwise, eg: false
      */
     public static boolean notValue(boolean value) {
-        return false;
+        return !value;
     }
 
     /**
@@ -176,6 +194,11 @@ public class FundamentalsTraining {
      * @return first value if isNotFirst is false, second value otherwise, eg: 4
      */
     public static int whichValueIsThis(int first, int second, boolean isNotFirst) {
-        return 0;
+
+        if (!isNotFirst) {
+            return first;
+        } else {
+            return second;
+        }
     }
 }
