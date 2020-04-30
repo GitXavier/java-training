@@ -1,3 +1,7 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ArrayTraining {
 
     /**
@@ -6,7 +10,7 @@ public class ArrayTraining {
      */
     public int[] emptyIntArray(int n) {
 
-        return null;
+        return new int[n];
     }
 
     /**
@@ -15,7 +19,7 @@ public class ArrayTraining {
      */
     public String[] emptyStringArray(int n) {
 
-        return null;
+        return new String[n];
     }
 
     /**
@@ -26,7 +30,12 @@ public class ArrayTraining {
      */
     public int[] intArray(int a, int b, int c) {
 
-        return null;
+        int[] newArray = new int[3];
+        newArray[0] = a;
+        newArray[1] = b;
+        newArray[2] = c;
+
+        return newArray;
     }
 
     /**
@@ -38,7 +47,12 @@ public class ArrayTraining {
      */
     public String[] stringArray(String a, String b, String c) {
 
-        return null;
+        String[] newArray = new String[3];
+        newArray[0] = a;
+        newArray[1] = b;
+        newArray[2] = c;
+
+        return newArray;
     }
 
     /**
@@ -47,7 +61,7 @@ public class ArrayTraining {
      */
     public int length(int[] array) {
 
-        return 0;
+        return array.length;
     }
 
     /**
@@ -56,7 +70,7 @@ public class ArrayTraining {
      */
     public int firstValue(int[] array) {
 
-        return 0;
+        return array[0];
     }
 
     /**
@@ -65,7 +79,8 @@ public class ArrayTraining {
      */
     public int lastValue(int[] array) {
 
-        return 0;
+        int lastValueArray = array.length - 1;
+        return array[lastValueArray];
     }
 
     /**
@@ -75,7 +90,7 @@ public class ArrayTraining {
      */
     public int valueAtPosition(int[] array, int position) {
 
-        return 0;
+        return array[position];
     }
 
     /**
@@ -86,7 +101,9 @@ public class ArrayTraining {
      */
     public int[] replace(int[] array, int value, int position) {
 
-        return null;
+        array[position] = value;
+
+        return array;
     }
 
     /**
@@ -95,7 +112,11 @@ public class ArrayTraining {
      */
     public int sum(int[] array) {
 
-        return 0;
+        int sum = 0;
+        for (int valueArray : array) {
+            sum += valueArray;
+        }
+        return sum;
     }
 
     /**
@@ -105,7 +126,14 @@ public class ArrayTraining {
      */
     public boolean contains(int[] array, int search) {
 
-        return false;
+        boolean result = false;
+        for (int valueArray: array) {
+            if (valueArray == search) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     /**
@@ -114,7 +142,11 @@ public class ArrayTraining {
      */
     public String[] capitalize(String[] array) {
 
-        return null;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Character.toUpperCase(array[i].charAt(0)) + array[i].substring(1);
+        }
+
+        return array;
     }
 
     /**
@@ -125,7 +157,15 @@ public class ArrayTraining {
      */
     public boolean equals(int[] first, int[] second) {
 
-        return false;
+        boolean result = false;
+
+        for (int i = 0; i < first.length; i++) {
+            if (first[i] == second[i]) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     /**
@@ -134,7 +174,13 @@ public class ArrayTraining {
      */
     public int[] reverse(int[] array) {
 
-        return null;
+        for(int i=0; i<array.length/2; i++){
+            int temp = array[i];
+            array[i] = array[array.length -i -1];
+            array[array.length -i -1] = temp;
+        }
+
+        return array;
     }
 
     /**
@@ -145,6 +191,17 @@ public class ArrayTraining {
      */
     public int[] concat(int[] first, int[] second) {
 
-        return null;
+        int[] concatArray = Arrays.copyOf(first, first.length + second.length);
+        System.arraycopy(second, 0, concatArray, first.length, second.length);
+
+
+        return concatArray;
+
+
+
+
+
+
+
     }
 }
